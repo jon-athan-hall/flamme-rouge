@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
+import Card from './Card';
 
 function App() {
   return (
     <div className="App">
+      <Card value={6} />
       <header className="App-header">
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
