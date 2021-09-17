@@ -8,7 +8,7 @@ function Card(props: CardProps) {
   const valueClasses = ['top left', 'top right', 'bottom right', 'bottom left'];
   return (
     <div className="Card">
-      {valueClasses.map(classes => <div className={`Card-value ${classes}`}>{props.value}</div>)}
+      {valueClasses.map((classes, index) => <div className={`Card-value ${classes}`} key={index}>{props.value}</div>)}
     </div>
   )
 }
