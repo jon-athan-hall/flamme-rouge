@@ -8,7 +8,7 @@ interface HandProps {
 function Hand(props: HandProps) {
   return (
     <div className="Hand">
-      {props.values.map((value, index) => <Card value={value} />)}
+      {props.values.map((value, index) => <Card value={value} key={index} />)}
     </div>
   );
 }

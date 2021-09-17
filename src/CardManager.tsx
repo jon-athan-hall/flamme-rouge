@@ -1,5 +1,7 @@
+import './CardManager.css';
 import Deck from './Deck';
 import Hand from './Hand';
+import Played from './Played';
 
 /*
 interface DeckManagerProps {
@@ -14,6 +16,7 @@ function CardManager() {
     <div className="CardManager">
       <Deck size={15} />
       <Hand values={[5, 3, 4, 2]} />
+      <Played values={[4, 3, 2]} />
     </div>
   );
 }

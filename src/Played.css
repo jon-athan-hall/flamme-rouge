@@ -1,0 +1,8 @@
+.Played {
+  position: relative;
+}
+
+.Played > .Card {
+  position: absolute;
+  top: 0;
+}
