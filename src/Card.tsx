@@ -1,7 +1,7 @@
 import './Card.css';
 
 interface CardProps {
-  value: number,
+  value: (number | undefined),
   style?: Object
 }
 

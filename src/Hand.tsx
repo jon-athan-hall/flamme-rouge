@@ -2,7 +2,7 @@ import './Hand.css';
 import Card from './Card';
 
 interface HandProps {
-  values: number[]
+  values: (number | undefined)[]
 };
 
 function Hand(props: HandProps) {
