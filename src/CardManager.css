@@ -1,4 +1,8 @@
-.CardManager {
+.CardManager-buttons {
+  margin-bottom: 1em;
+}
+
+.CardManager-cards {
   display: flex;
   gap: 1em;
 }
