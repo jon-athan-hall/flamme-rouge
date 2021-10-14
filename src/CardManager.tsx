@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './CardManager.css';
 import Deck from './Deck';
 import Hand from './Hand';
@@ -26,15 +26,10 @@ function CardManager() {
    * which values tend to change together.
    */
   const [cards, setCards] = useState<CardManagerState>({
-    deck: [3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7],
+    deck: shuffle([3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7]),
     hand: [],
     discard: []
   });
-  /**
-  useEffect(() => {
-    setDeck(shuffle(deck));
-  }, [deck]);
-  */
 
   const [played, setPlayed] = useState([]);
 
@@ -50,7 +45,7 @@ function CardManager() {
 
     while (newHand.length < 4) {
       if (tempDeck.length === 0) {
-        tempDeck = tempDiscard;
+        tempDeck = shuffle(tempDiscard);
         tempDiscard = [];
       }
       let card = tempDeck.pop();
