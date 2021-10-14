@@ -11,7 +11,7 @@ function Played(props: PlayedProps) {
       top: `${index * 2.5}em`,
       zIndex: index
     };
-    return <Card value={value} key={index} style={cardStyle} />;
+    return <Card value={value} key={index} style={cardStyle} handleClick={() => null}/>;
   });
 
   return (

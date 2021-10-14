@@ -15,7 +15,7 @@ interface CardManagerProps {
 
 interface CardManagerState {
   deck: (number | undefined)[],
-  hand: (number | undefined)[],
+  hand: any[],
   discard: (number | undefined)[]
 }
 
@@ -60,6 +60,10 @@ function CardManager() {
     setCards({ deck: tempDeck, hand: newHand, discard: tempDiscard });
   }
 
+  function handleCardSelect(value: number) {
+    console.log(value);
+  }
+
   return (
     <div className="CardManager">
       <div className="CardManager-buttons">
@@ -67,7 +71,7 @@ function CardManager() {
       </div>
       <div className="CardManager-cards">
         <Deck size={cards.deck.length} />
-        <Hand values={cards.hand} />
+        <Hand values={cards.hand} handleCardClick={handleCardSelect}/>
         <Played values={played} />
       </div>
       <div>
